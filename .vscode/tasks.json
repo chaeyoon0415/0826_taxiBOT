@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "설치", "type": "shell",
+      "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install 'gradio<6' google-generativeai python-dotenv 2>&1 | tail -15",
+      "options": { "cwd": "${workspaceFolder}" },
+      "presentation": { "reveal": "always", "panel": "dedicated", "focus": true, "clear": true },
+      "problemMatcher": [] },
+    { "label": "봇 실행", "type": "shell",
+      "command": "./.venv/bin/python app.py",
+      "options": { "cwd": "${workspaceFolder}" },
+      "presentation": { "reveal": "always", "panel": "dedicated", "focus": true, "clear": true },
+      "problemMatcher": [] }
+  ]
+}
